@@ -1,8 +1,8 @@
-package fr.fragnier.veille.jersey.rest;
+package fr.fragnier.veille.jersey.controller.rest;
 
-import fr.fragnier.veille.jersey.model.HelloDto;
-import fr.fragnier.veille.jersey.service.ConfigService;
-import fr.fragnier.veille.jersey.service.EnvironmentService;
+import fr.fragnier.veille.jersey.controller.model.HelloDto;
+import fr.fragnier.veille.jersey.controller.service.ConfigService;
+import fr.fragnier.veille.jersey.controller.service.EnvironmentService;
 import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,7 +23,7 @@ public class RestController {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return configService.toto();
+        return configService.getCogitValue();
     }
 
     @GET

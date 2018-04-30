@@ -1,4 +1,4 @@
-package fr.fragnier.veille.jersey.model;
+package fr.fragnier.veille.jersey.controller.model;
 
 import org.joda.time.LocalDate;
 

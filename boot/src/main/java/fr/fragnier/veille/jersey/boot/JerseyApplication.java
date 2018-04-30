@@ -1,17 +1,16 @@
-package fr.fragnier.veille.jersey;
+package fr.fragnier.veille.jersey.boot;
 
-import fr.fragnier.veille.jersey.service.ConfigService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import fr.fragnier.veille.jersey.controller.ControllerModuleConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
+@Import(ControllerModuleConfig.class)
 public class JerseyApplication extends SpringBootServletInitializer {
-
-    @Autowired
-    private ConfigService configService;
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

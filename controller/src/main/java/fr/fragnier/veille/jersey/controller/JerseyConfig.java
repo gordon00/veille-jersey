@@ -1,4 +1,4 @@
-package fr.fragnier.veille.jersey;
+package fr.fragnier.veille.jersey.controller;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
-        this.packages(JerseyApplication.class.getPackage().getName());
+        this.packages(JerseyConfig.class.getPackage().getName());
     }
 }
