@@ -13,4 +13,8 @@ public class EnvironmentService {
     public String[] getActiveProfiles() {
         return environment.getActiveProfiles();
     }
+
+    public String getProperty(String key) {
+        return environment.getProperty(key);
+    }
 }

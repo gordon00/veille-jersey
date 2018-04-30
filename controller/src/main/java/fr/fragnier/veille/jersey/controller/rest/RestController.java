@@ -10,6 +10,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("/hello")
 public class RestController {
@@ -31,9 +33,23 @@ public class RestController {
     @Produces(MediaType.TEXT_PLAIN)
     public String getEnv() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Profiles actifs : ");
-        for(String env : environmentService.getActiveProfiles()) {
-            sb.append(env).append(" ");
+
+        final String[] activeProfiles = environmentService.getActiveProfiles();
+        if(activeProfiles.length > 0) {
+            sb.append("Profiles actifs : ");
+            for (String env : activeProfiles) {
+                sb.append(env).append(" ");
+            }
+        }
+
+        sb.append("\n");
+
+        final List<String> propNames = new ArrayList<>();
+        propNames.add("cogit.value");
+        propNames.add("cogit.secondValue");
+
+        for(String propName : propNames) {
+            sb.append(propName).append(" --> ").append(environmentService.getProperty(propName)).append("\n");
         }
 
         return sb.toString();
