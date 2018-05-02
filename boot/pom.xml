@@ -13,6 +13,8 @@
     <artifactId>boot</artifactId>
     <version>${parent.version}</version>
 
+    <packaging>war</packaging>
+
 
     <dependencies>
         <dependency>
