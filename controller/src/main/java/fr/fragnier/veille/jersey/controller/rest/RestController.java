@@ -47,6 +47,7 @@ public class RestController {
         final List<String> propNames = new ArrayList<>();
         propNames.add("cogit.value");
         propNames.add("cogit.secondValue");
+        propNames.add("e2e/cogit");
 
         for(String propName : propNames) {
             sb.append(propName).append(" --> ").append(environmentService.getProperty(propName)).append("\n");
