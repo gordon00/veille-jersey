@@ -20,6 +20,18 @@
             <artifactId>controller</artifactId>
             <version>${parent.version}</version>
         </dependency>
+
+        <!-- Pour activer l'actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Si pas déjà inclu dans le projet, nécessaire pour ajouter les endpoints web de l'actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
