@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "cogit.value",
+      "type": "java.lang.String",
+      "description": "Description for cogit.value."
+  }
+] }

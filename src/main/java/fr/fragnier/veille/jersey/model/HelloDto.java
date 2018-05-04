@@ -1,6 +1,6 @@
 package fr.fragnier.veille.jersey.model;
 
-import java.time.LocalDate;
+import org.joda.time.LocalDate;
 
 public class HelloDto {
 
